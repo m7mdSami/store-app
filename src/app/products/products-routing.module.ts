@@ -7,15 +7,15 @@ import { ProductListComponent } from './components/product-list/product-list.com
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/product-list',
+    redirectTo: '/products',
     pathMatch: 'full'
   },
   {
-    path: 'product-list',
+    path: 'products',
     component: ProductListComponent,
   },
   {
-    path: 'product-list/:id',
+    path: 'products/:id',
     component: ProductDetailsComponent
   },
   {
