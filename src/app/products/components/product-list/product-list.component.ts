@@ -31,7 +31,6 @@ export class ProductListComponent implements OnInit, OnDestroy {
     this.httpService.get<Product[]>(APIs().products, queryParam)
       .pipe(takeUntil(this._destroy$)) 
       .subscribe((products: Product[]) => {
-        console.log(products)
         this.products = products
       })
   }

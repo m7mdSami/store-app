@@ -34,7 +34,6 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
         takeUntil(this._destroy$)
       )
       .subscribe((product: Product) => {
-        console.log(product)
         this.product = product
       })
   }

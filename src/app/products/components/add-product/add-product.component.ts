@@ -34,7 +34,7 @@ export class AddProductComponent implements OnInit {
     }
 
     this.httpService.post(APIs().products, body)
-      .subscribe(res => {
+      .subscribe(() => {
         this._snackBar.open(`Product Added Successfully`);
       })
   }
