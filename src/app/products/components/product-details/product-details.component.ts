@@ -29,7 +29,7 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
     this.activatedRoute.params
       .pipe(
         switchMap((params) =>
-          this.httpService.get<Product>(APIs({ Product_ID: params.id }).productDetails)
+          this.httpService.get<Product>(APIs({ Product_ID: params.id }).product)
         ),
         takeUntil(this._destroy$)
       )
