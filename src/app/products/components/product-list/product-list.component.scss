@@ -1,0 +1,14 @@
+:host ::ng-deep {
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        &__card {
+            width: calc(25% - 20px);
+            margin: 10px;
+        }
+        .mat-card-content {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<section class="product-list" *ngIf="products">
+  <div class="product-list__card" *ngFor="let product of products">
+    <mat-card class="">
+      <mat-card-header>
+        <mat-card-title>{{ product.title }}</mat-card-title>
+      </mat-card-header>
+      <img
+        mat-card-image
+        [src]="product.image"
+        [alt]="product.title"
+      />
+      <mat-card-content>
+        <span class="price">Price: {{ product.price }}</span>
+        <span class="category">Category: {{ product.category }}</span>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-raised-button color="primary" [routerLink]="[product.id]">View Details</a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>
+<div class="loader" *ngIf="!products">
+    <mat-spinner></mat-spinner>
+</div>

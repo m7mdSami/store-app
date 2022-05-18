@@ -1,0 +1,12 @@
+:host ::ng-deep {
+    .add-product {
+        .mat-card {
+            width: 400px;
+            margin: 10px auto;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

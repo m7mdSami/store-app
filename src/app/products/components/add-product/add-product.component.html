@@ -1,0 +1,27 @@
+<section class="add-product">
+  <mat-card>
+    <form class="form" #f="ngForm" [formGroup]="form" (ngSubmit)="addProduct()">
+      <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title"/>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Price</mat-label>
+        <input matInput formControlName="price"/>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Image</mat-label>
+        <input matInput formControlName="description"/>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Category</mat-label>
+        <input matInput formControlName="image"/>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="category"></textarea>
+      </mat-form-field>
+      <button mat-raised-button color="primary" [disabled]="!form.valid">Add Product</button>
+    </form>
+  </mat-card>
+</section>
